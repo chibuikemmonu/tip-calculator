@@ -3,6 +3,7 @@ let tipInput = document.getElementById("tipInput");
 let perPersonTotal = document.getElementById("perPersonTotal");
 let numberOfPeople = document.getElementById("numberOfPeople");
 let resetCalcBtn = document.getElementById("resetCalcBtn");
+let totalBillTitle = document.getElementById("totalBillTitle");
 
 numberOfPeople.innerText = 1;
 let currNumOfPeople = Number(numberOfPeople.innerText);
@@ -19,6 +20,11 @@ function calculateBill() {
 function increasePeople() {
   currNumOfPeople++;
   numberOfPeople.innerText = currNumOfPeople;
+  if (currNumOfPeople > 1) {
+    totalBillTitle.innerText = "Total per Person";
+  } else {
+    totalBillTitle.innerText = "Total Bill";
+  }
   calculateBill();
 }
 function decreasePeople() {
@@ -27,8 +33,14 @@ function decreasePeople() {
     // currNumOfPeople = 1;
     // numberOfPeople.innerText = 1;
   }
+
   currNumOfPeople--;
   numberOfPeople.innerText = currNumOfPeople;
+  if (currNumOfPeople > 1) {
+    totalBillTitle.innerText = "Total per Person";
+  } else {
+    totalBillTitle.innerText = "Total Bill";
+  }
 
   calculateBill();
 }
@@ -40,4 +52,5 @@ function resetCalculator() {
   billTotalInput.value = "";
   overallBill = 0;
   perPersonTotal.innerText = `$0.00`;
+  totalBillTitle.innerText = "Total Bill";
 }
