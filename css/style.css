@@ -1,10 +1,17 @@
 * {
   font-family: "M PLUS Rounded 1c", Avenir Next, Helvetica, sans-serif;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: #8990ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* padding: 10px; */
 }
 
 .wrapper {
@@ -14,7 +21,7 @@ body {
   background: #272639;
   border-radius: 1rem;
   padding: 1.2rem;
-  margin: 100px auto;
+  margin: 10px;
 }
 
 #topContainer {
@@ -104,8 +111,9 @@ body {
 
 .buttonContainer {
   background: #8990ec;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
@@ -114,6 +122,8 @@ body {
 .splitButton {
   background: none;
   border: none;
+  width: 100%;
+  height: 100%;
 }
 
 .controls {
