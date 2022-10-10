@@ -25,6 +25,59 @@ body {
   margin-top: 1.4rem;
 }
 
+.reset-btn-div {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+#resetCalcBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+#resetCalcBtn span {
+  position: absolute;
+  white-space: nowrap;
+  top: -50px;
+  right: 0;
+  z-index: -1;
+  background: #353959;
+  padding: 8px 10px;
+  border-radius: 10px;
+  pointer-events: none;
+  transform: scale(0);
+  transition: 0.12s;
+}
+#resetCalcBtn span::before {
+  content: "";
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #353959;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #353959;
+  right: 10px;
+  bottom: -5px;
+  border-radius: 2px;
+  z-index: -2;
+  transform: rotate(45deg);
+}
+
+#resetCalcBtn:hover span {
+  transform: scale(1);
+}
+#resetCalcBtn svg {
+  transition: 0.3s;
+}
+#resetCalcBtn:hover svg {
+  transform: rotate(50deg);
+}
+
 .title {
   font-weight: bold;
   margin-bottom: 0.6rem;
